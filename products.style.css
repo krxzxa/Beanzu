@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #714423;
+    font-family: 'Insturment Serif';
+    color: #deaf84;
+}
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(cafe.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #deaf84;
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #deaf84;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #714423;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+section {
+    padding: 3em;
+    text-align: center;
+}
+
+section h2 {
+    color: #deaf84;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+section p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #deaf84;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    width: 23%;
+    margin-bottom: 2em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.menu-item:hover {
+    transform: scale(1.02);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-details {
+    padding: 1em;
+}
+
+.dish-name {
+    font-size: 1.5em;
+    color: #deaf84;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.dish-description {
+    color: #dfcdc0;
+}
+.price {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: none;
+    color:whitesmoke;
+    font-weight: bolder;
+}
+.menu-item:hover .price {
+    display: block;
+}
+#menuCategories {
+    background-color: #714423; /* Light gray background */
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center-align text */
+}
+
+.category-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.category-list li {
+    display: inline-block; /* Display list items in a row */
+    margin-right: 20px; /* Add right margin between items */
+}
+
+.category-list a {
+    text-decoration: none; /* Remove underline from links */
+    color: #deaf84; /* Dark text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    padding: 10px 15px; /* Padding for each link */
+    border: 2px solid #deaf84; /* Border around each link */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
+}
+
+.category-list a:hover {
+    background-color: #271203;
+    color: #fff; 
+}

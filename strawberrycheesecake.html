@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Beanzu: Products/Services</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="master.css">
+        <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #714423;
+    font-family: 'Insturment Serif';
+    color: #714423;
+    font-size: large;
+}
+h1,h2{
+    text-align: center;
+}
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(cafe.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #deaf84;
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #deaf84;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #714423;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+section {
+    max-width: 600px;
+    margin: 2em auto;
+    background-color: #deaf84;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.product img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+form {
+    display: grid;
+    gap: 1em;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.8em;
+    background-color: #714423;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #555;
+}
+        </style>
+        <script>
+            function updateTotalPrice(productNumber) {
+                var quantity = document.getElementById('product' + productNumber).value;
+                var pricePerUnit = 150;
+                var totalPrice = quantity * pricePerUnit;
+                document.getElementById('totalPrice' + productNumber).textContent = 'Total: ₱ ' + totalPrice.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+        <div class="banner">
+            <div class="navbar">
+                <a href="index.html"> <img src="beanzu-removebg-preview.png" class="logo"> </a>
+                <ul>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="aboutus.html"> About Us </a></li>
+                <li><a href="products.html">Products/Services</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section>
+        <h2>Strawberry Cheesecake Croissant</h2>
+    
+        <form action="process_order.php" method="post">
+            <div class="product">
+                <img src="Strawberry-Cheesecake-Croissant.jpeg">
+                <label for="product1"><br>Quantity</label>
+                <input type="number" id="product1" name="product1" min="0" value="0" onchange="updateTotalPrice(1)">
+                <div id="totalPrice1">Total: ₱ 0.00</div>
+            </div>   
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+    </body>
+</html>
