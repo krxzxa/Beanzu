@@ -8,6 +8,12 @@ body {
     font-family: 'Insturment Serif';
     color: #deaf84;
 }
+h2{
+    color: #271203;
+}
+.category-list{
+    color:#271203;
+}
 
 header {
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(cafe.jpg);
@@ -160,11 +166,46 @@ section p {
     font-weight: bold; /* Bold text */
     padding: 10px 15px; /* Padding for each link */
     border: 2px solid #deaf84; /* Border around each link */
-    border-radius: 5px; /* Add rounded corners */
+    border-radius: 25px; /* Add rounded corners */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 }
 
 .category-list a:hover {
     background-color: #271203;
     color: #fff; 
+}
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #271203;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+footer {
+    background-color: #482913;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-family: 'Instrument Serif';
+}
+
+.footer-content a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }

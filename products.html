@@ -295,5 +295,36 @@
         </li>
     </ul>
 </section>
-    </body>
+
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+
+<script>
+    var scrollToTopButton = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    scrollToTopButton.addEventListener("click", function () {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    });
+</script>
+</body>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Beanzu. All rights reserved.</p>
+        <p><a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></p>
+        <p>Contact: <a href="mailto:info@yourwebsite.com">beanzu@gmail.com</a></p>
+    </div>
+</footer>
 </html>
